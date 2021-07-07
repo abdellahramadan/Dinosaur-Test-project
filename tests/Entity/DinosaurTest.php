@@ -9,7 +9,7 @@ class DinosaurTest extends TestCase
 {
     public function testSettingLength()
     {
-        $dinosaur = new Dinosaur();
+        $dinosaur = new Dinosaur('Velociraptor', true);
 
         $this->assertSame(0, $dinosaur->getLength());
 
@@ -20,9 +20,9 @@ class DinosaurTest extends TestCase
 
     public function testDinosaurHasNotShrunk()
     {
-        $dinosaur = new Dinosaur();
+        $dinosaur = new Dinosaur('Velociraptor', true);
 
-        $dinosaur->setLength(1);
+        $dinosaur->setLength(15);
 
         $this->assertGreaterThan(12, $dinosaur->getLength(), 'Yeah some error occured');
     }
